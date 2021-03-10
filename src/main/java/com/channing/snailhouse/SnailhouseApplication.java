@@ -6,6 +6,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
 
 @SpringBootApplication
+@MapperScan({"com.channing.snailhouse.model"})
 public class SnailhouseApplication {
 
     public static void main(String[] args) {

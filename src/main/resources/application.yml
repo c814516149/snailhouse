@@ -25,12 +25,8 @@ management:
   version: 1.0.1
 
 mybatis:
-  type-aliases-package: "com.channing.snailhouse.bean.dto"
-  mapper-locations:
-    classpath:mapper/*.xml
-  configuration:
-    log-impl:
-      org.apache.ibatis.logging.stdout.StdOutImpl
+  mapper-locations: "classpath*:com/channing/snailhouse/model/*Mapper.xml"
+  type-aliases-package: com.channing.snailhouse.bean.dto
 
 pagehelper:
   helperDialect: mysql

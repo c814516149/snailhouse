@@ -2,6 +2,7 @@ package com.channing.snailhouse.controller;
 
 import com.channing.snailhouse.bean.Result;
 import com.channing.snailhouse.bean.dto.PostDto;
+import com.channing.snailhouse.model.entity.PostEntity;
 import com.channing.snailhouse.service.PostService;
 import com.github.pagehelper.Page;
 import com.github.pagehelper.PageHelper;
@@ -29,6 +30,12 @@ public class PostController {
         page.setPageSize(pageSize);
         PageInfo<PostDto> pageInfo = postService.queryPostList(page);
         return new Result<>(pageInfo);
+    }
+
+    @RequestMapping(value = "/admin/writePost", method = RequestMethod.POST)
+    public Result<String> writePost(@RequestParam PostEntity postEntity) {
+        
+        return new Result<>("");
     }
 
 }

@@ -14,8 +14,12 @@ import java.util.List;
 @Service
 public class PostServiceImpl implements PostService {
 
-    @Autowired
     private PostMapper postMapper;
+
+    @Autowired
+    public void setPostMapper(PostMapper postMapper) {
+        this.postMapper = postMapper;
+    }
 
     @Override
     public PageInfo<PostDto> queryPostList(Page page) {
